@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ofertas · Conti Talent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css?v=logo-big" />
+  <link rel="stylesheet" href="css/layout.css?v=logo-full" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html">
+        <img class="brand__logo" src="img/contitalent.png" alt="Conti Talent" />
+      </a>
+      <nav class="primary-nav">
+        <a href="index.html"      data-nav="index.html">Inicio</a>
+        <a href="areas.html"      data-nav="areas.html">Áreas</a>
+        <a href="ofertas.html"    data-nav="ofertas.html" class="is-active">Ofertas</a>
+        <a href="publicidad.html" data-nav="publicidad.html">Publicidad</a>
+        <a href="contacto.html"   data-nav="contacto.html">Contacto</a>
+        <span class="session-area" id="session-area"></span>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page-shell">
+    <header class="page-header anim-fade-up">
+      <div>
+        <h1 class="page-header__title">Ofertas de la Universidad Continental</h1>
+        <p class="page-header__sub">Filtra por tipo (prácticas o trabajo), área, modalidad o palabra clave.</p>
+      </div>
+    </header>
+
+    <section class="filters-bar" aria-label="Filtros">
+      <div class="searchbar">
+        <input class="input" id="filter-search" type="search" placeholder="Buscar oferta..." />
+      </div>
+      <select class="select" id="filter-tipo" aria-label="Tipo de oferta">
+        <option value="">Todos los tipos</option>
+      </select>
+      <select class="select" id="filter-area" aria-label="Área">
+        <option value="">Todas las áreas</option>
+      </select>
+      <select class="select" id="filter-modalidad" aria-label="Modalidad">
+        <option value="">Todas las modalidades</option>
+        <option value="Presencial">Presencial</option>
+        <option value="Remoto">Remoto</option>
+        <option value="Híbrido">Híbrido</option>
+      </select>
+    </section>
+
+    <section class="ofertas-list" id="ofertas-list" aria-label="Listado de ofertas"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__bottom">
+      <span>© 2026 Universidad Continental · Conti Talent</span>
+      <span>Huancayo · Junín · Perú</span>
+    </div>
+  </footer>
+
+  <script src="js/storage-api.js?v=rest3"></script>
+  <script src="js/ui.js?v=rest3"></script>
+  <script src="js/validators.js?v=rest3"></script>
+  <script src="js/auth.js?v=rest3"></script>
+  <script src="js/areas.js?v=rest3"></script>
+  <script src="js/ofertas.js?v=rest3"></script>
+  <script src="js/main.js?v=rest3"></script>
+  <script src="js/page-ofertas.js?v=rest3"></script>
+</body>
+</html>

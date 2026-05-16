@@ -1,0 +1,16 @@
+package com.conti_talent.springboot.appweb.conti_talent_web.repository;
+
+import com.conti_talent.springboot.appweb.conti_talent_web.model.OfertaRequisito;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+/**
+ * Acceso a datos de la entidad intermedia OfertaRequisito.
+ */
+public interface IOfertaRequisitoRepository extends JpaRepository<OfertaRequisito, Long> {
+
+    List<OfertaRequisito> findByOferta_IdOrderByOrdenAsc(Long ofertaId);
+
+    void deleteByOferta_Id(Long ofertaId);
+}

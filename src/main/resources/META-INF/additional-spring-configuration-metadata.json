@@ -1,0 +1,14 @@
+{
+  "properties": [
+    {
+      "name": "conti.uploads.postulantes-dir",
+      "type": "java.lang.String",
+      "description": "Directorio base donde se guardan los documentos de postulantes. El sistema crea subcarpetas cv y certificados."
+    },
+    {
+      "name": "conti.uploads.max-file-size-bytes",
+      "type": "java.lang.Long",
+      "description": "Tamano maximo permitido por archivo subido, expresado en bytes."
+    }
+  ]
+}

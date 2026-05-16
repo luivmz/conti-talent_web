@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Usuarios · Conti Talent Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/base.css?v=logo-big" />
+  <link rel="stylesheet" href="../css/layout.css?v=logo-full" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="../index.html">
+        <img class="brand__logo" src="../img/contitalent.png" alt="Conti Talent" /><span class="brand__admin">Admin</span>
+      </a>
+      <nav class="primary-nav">
+        <a href="../index.html">Ir al sitio</a>
+        <span class="session-area" id="session-area"></span>
+      </nav>
+    </div>
+  </header>
+
+  <div class="app-shell">
+    <aside class="app-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section__label">General</div>
+        <a class="sidebar-link" href="dashboard.html"><span>📊</span> Dashboard</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section__label">Reclutamiento</div>
+        <a class="sidebar-link" href="admin-areas.html"><span>🗂️</span> Áreas</a>
+        <a class="sidebar-link" href="admin-ofertas.html"><span>💼</span> Ofertas</a>
+        <a class="sidebar-link" href="admin-preguntas.html"><span>❓</span> Preguntas</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section__label">Evaluación</div>
+        <a class="sidebar-link" href="admin-postulantes.html"><span>👥</span> Postulantes</a>
+        <a class="sidebar-link" href="admin-metricas.html"><span>📈</span> Métricas / Ranking</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section__label">Sistema</div>
+        <a class="sidebar-link is-active" href="admin-usuarios.html"><span>🔐</span> Usuarios</a>
+      </div>
+    </aside>
+
+    <main class="app-main">
+      <header class="page-header anim-fade-up">
+        <div>
+          <h1 class="page-header__title">Usuarios</h1>
+          <p class="page-header__sub">Cuentas con acceso al sistema (postulantes y administradores).</p>
+        </div>
+        <button class="btn btn--primary" id="btn-nuevo-usuario">+ Nuevo usuario</button>
+      </header>
+
+      <section class="filters-bar">
+        <div class="searchbar">
+          <input class="input" id="search-usuario" type="search" placeholder="Buscar por nombre o correo..." />
+        </div>
+        <select class="select" id="filter-rol">
+          <option value="">Todos los roles</option>
+          <option value="postulante">Postulantes</option>
+          <option value="admin">Administradores</option>
+        </select>
+      </section>
+
+      <section class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Usuario</th>
+              <th>Rol</th>
+              <th>Estado</th>
+              <th>Creado</th>
+              <th class="text-right">Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="usuarios-tbody"></tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="../js/storage-api.js?v=rest3"></script>
+  <script src="../js/ui.js?v=rest3"></script>
+  <script src="../js/validators.js?v=rest3"></script>
+  <script src="../js/auth.js?v=rest3"></script>
+  <script src="../js/usuarios.js?v=rest3"></script>
+  <script src="../js/main.js?v=rest3"></script>
+  <script src="../js/page-admin-usuarios.js?v=rest3"></script>
+</body>
+</html>

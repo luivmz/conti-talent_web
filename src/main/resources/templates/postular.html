@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Postular · Conti Talent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css?v=logo-big" />
+  <link rel="stylesheet" href="css/layout.css?v=logo-full" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html">
+        <img class="brand__logo" src="img/contitalent.png" alt="Conti Talent" />
+      </a>
+      <nav class="primary-nav">
+        <a href="ofertas.html">Ofertas</a>
+        <span class="session-area" id="session-area"></span>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page-shell--narrow">
+    <header class="anim-fade-up mb-5">
+      <span class="badge" id="postular-area">—</span>
+      <h1 id="postular-title" class="mt-2">—</h1>
+      <p class="muted">Completa tus datos para enviar tu postulación. Después podrás resolver la evaluación técnica.</p>
+    </header>
+
+    <div class="stepper mb-5">
+      <div class="step is-current"><span class="step__num">1</span><span>Datos personales</span></div>
+      <div class="step"><span class="step__num">2</span><span>Evaluación</span></div>
+      <div class="step"><span class="step__num">3</span><span>Estado</span></div>
+    </div>
+
+    <form id="postular-form" class="form-grid card anim-fade-up" novalidate>
+      <h3 class="mb-2">Datos personales</h3>
+      <div class="form-grid form-grid--2">
+        <div class="field">
+          <label for="nombre">Nombre completo</label>
+          <input class="input" id="nombre" name="nombre" />
+          <span class="error"></span>
+        </div>
+        <div class="field">
+          <label for="email">Correo electrónico</label>
+          <input class="input" type="email" id="email" name="email" />
+          <span class="error"></span>
+        </div>
+      </div>
+      <div class="field">
+        <label for="telefono">Teléfono</label>
+        <input class="input" id="telefono" name="telefono" placeholder="+51 999 999 999" />
+        <span class="error"></span>
+      </div>
+
+      <h3 class="mt-4">Experiencia y habilidades</h3>
+      <div class="form-grid form-grid--2">
+        <div class="field">
+          <label for="aniosExperiencia">Anios de experiencia</label>
+          <input class="input" type="number" min="0" id="aniosExperiencia" name="aniosExperiencia" value="0" />
+          <span class="error"></span>
+        </div>
+        <div class="field">
+          <label for="nivelEstudios">Nivel de estudios</label>
+          <input class="input" id="nivelEstudios" name="nivelEstudios" placeholder="Universitario, Titulado, Maestria..." />
+        </div>
+      </div>
+      <div class="form-grid form-grid--2">
+        <div class="field">
+          <label for="carrera">Carrera</label>
+          <input class="input" id="carrera" name="carrera" />
+        </div>
+        <div class="field">
+          <label for="disponibilidad">Disponibilidad</label>
+          <input class="input" id="disponibilidad" name="disponibilidad" placeholder="Inmediata, 15 dias..." />
+        </div>
+      </div>
+      <div class="form-grid form-grid--2">
+        <div class="field">
+          <label for="modalidadPreferida">Modalidad preferida</label>
+          <input class="input" id="modalidadPreferida" name="modalidadPreferida" placeholder="Presencial, Hibrido o Remoto" />
+        </div>
+        <div class="field">
+          <label for="pretensionSalarial">Pretension salarial</label>
+          <input class="input" type="number" min="0" step="100" id="pretensionSalarial" name="pretensionSalarial" />
+        </div>
+      </div>
+      <div class="field">
+        <label for="experiencia">Experiencia profesional o académica</label>
+        <textarea class="textarea" id="experiencia" name="experiencia" placeholder="Cuéntanos sobre tu experiencia, proyectos y logros..."></textarea>
+        <span class="error"></span>
+      </div>
+      <div class="field">
+        <label for="habilidades">Habilidades clave</label>
+        <textarea class="textarea" id="habilidades" name="habilidades" placeholder="Java, SQL, didáctica, redacción..."></textarea>
+        <span class="error"></span>
+      </div>
+
+      <div class="form-grid form-grid--2">
+        <div class="field">
+          <label for="linkedin">LinkedIn</label>
+          <input class="input" type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/..." />
+        </div>
+        <div class="field">
+          <label for="portafolio">Portafolio</label>
+          <input class="input" type="url" id="portafolio" name="portafolio" placeholder="https://..." />
+        </div>
+      </div>
+
+      <h3 class="mt-4">Curriculum Vitae</h3>
+      <label class="file-drop" id="cv-drop">
+        <input type="file" id="cv-input" accept=".pdf,.docx" />
+        <div class="file-drop__icon">📎</div>
+        <div class="font-medium" id="cv-label">Sube tu CV (PDF o DOCX)</div>
+        <div class="soft text-sm">Haz clic o arrastra el archivo aquí</div>
+      </label>
+      <div class="field">
+        <label for="documentos-input">Documentos adicionales</label>
+        <input class="input" type="file" id="documentos-input" multiple accept=".pdf,.docx,.png,.jpg,.jpeg" />
+        <span class="soft text-sm">Certificados, constancias, evidencias o portafolio en PDF, DOCX, PNG o JPG.</span>
+      </div>
+
+      <div class="form-actions">
+        <a href="ofertas.html" class="btn btn--ghost">Cancelar</a>
+        <button type="submit" class="btn btn--primary btn--lg">Enviar postulación</button>
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__bottom">
+      <span>© 2026 Universidad Continental · Conti Talent</span>
+    </div>
+  </footer>
+
+  <script src="js/storage-api.js?v=rest3"></script>
+  <script src="js/ui.js?v=rest3"></script>
+  <script src="js/validators.js?v=rest3"></script>
+  <script src="js/auth.js?v=rest3"></script>
+  <script src="js/areas.js?v=rest3"></script>
+  <script src="js/ofertas.js?v=rest3"></script>
+  <script src="js/postulantes.js?v=rest3"></script>
+  <script src="js/main.js?v=rest3"></script>
+  <script src="js/page-postular.js?v=rest3"></script>
+</body>
+</html>

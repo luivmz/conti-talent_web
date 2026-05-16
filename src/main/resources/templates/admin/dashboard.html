@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard · Conti Talent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/base.css?v=logo-big" />
+  <link rel="stylesheet" href="../css/layout.css?v=logo-full" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="../index.html">
+        <img class="brand__logo" src="../img/contitalent.png" alt="Conti Talent" /><span class="brand__admin">Admin</span>
+      </a>
+      <nav class="primary-nav">
+        <a href="../index.html">Ir al sitio</a>
+        <span class="session-area" id="session-area"></span>
+      </nav>
+    </div>
+  </header>
+
+  <div class="app-shell">
+    <aside class="app-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section__label">General</div>
+        <a class="sidebar-link is-active" href="dashboard.html"><span>📊</span> Dashboard</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section__label">Reclutamiento</div>
+        <a class="sidebar-link" href="admin-areas.html"><span>🗂️</span> Áreas</a>
+        <a class="sidebar-link" href="admin-ofertas.html"><span>💼</span> Ofertas</a>
+        <a class="sidebar-link" href="admin-preguntas.html"><span>❓</span> Preguntas</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section__label">Evaluación</div>
+        <a class="sidebar-link" href="admin-postulantes.html"><span>👥</span> Postulantes</a>
+        <a class="sidebar-link" href="admin-metricas.html"><span>📈</span> Métricas / Ranking</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section__label">Sistema</div>
+        <a class="sidebar-link" href="admin-usuarios.html"><span>🔐</span> Usuarios</a>
+      </div>
+    </aside>
+
+    <main class="app-main">
+      <header class="page-header anim-fade-up">
+        <div>
+          <h1 class="page-header__title">Panel de control</h1>
+          <p class="page-header__sub">Resumen ejecutivo del proceso de reclutamiento de la Universidad Continental.</p>
+        </div>
+      </header>
+
+      <section class="kpi-grid" id="admin-kpis"></section>
+
+      <section class="section--top-loose">
+        <h2>Postulantes por estado</h2>
+        <div class="kpi-grid mt-4" id="admin-estados"></div>
+      </section>
+
+      <section class="section--top-loose">
+        <h2>Todos los postulantes</h2>
+        <div class="table-wrap mt-4">
+          <table class="table">
+            <thead>
+              <tr><th>Postulante</th><th>Oferta</th><th>Estado</th><th>Puntaje</th><th>Fecha</th></tr>
+            </thead>
+            <tbody id="admin-recientes"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section--top-loose">
+        <h2>Usuarios registrados</h2>
+        <div class="table-wrap mt-4">
+          <table class="table">
+            <thead>
+              <tr><th>Usuario</th><th>Rol</th><th>Estado</th><th>Creado</th></tr>
+            </thead>
+            <tbody id="admin-usuarios-resumen"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../js/storage-api.js?v=rest7"></script>
+  <script src="../js/ui.js?v=rest7"></script>
+  <script src="../js/validators.js?v=rest7"></script>
+  <script src="../js/auth.js?v=rest7"></script>
+  <script src="../js/areas.js?v=rest7"></script>
+  <script src="../js/ofertas.js?v=rest7"></script>
+  <script src="../js/usuarios.js?v=rest7"></script>
+  <script src="../js/postulantes.js?v=rest7"></script>
+  <script src="../js/main.js?v=rest7"></script>
+  <script src="../js/page-admin-dashboard.js?v=rest7"></script>
+</body>
+</html>

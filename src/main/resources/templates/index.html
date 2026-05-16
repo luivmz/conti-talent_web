@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conti Talent · Universidad Continental Huancayo</title>
+  <meta name="description" content="Plataforma oficial de talento de la Universidad Continental Huancayo: prácticas, plazas docentes y oportunidades académicas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css?v=logo-big" />
+  <link rel="stylesheet" href="css/layout.css?v=logo-full" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages.css?v=hero-img" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html" aria-label="Inicio Conti Talent">
+        <img class="brand__logo" src="img/contitalent.png" alt="Conti Talent" />
+      </a>
+      <nav class="primary-nav" aria-label="Principal">
+        <a href="index.html"      data-nav="index.html">Inicio</a>
+        <a href="areas.html"      data-nav="areas.html">Áreas</a>
+        <a href="ofertas.html"    data-nav="ofertas.html">Ofertas</a>
+        <a href="publicidad.html" data-nav="publicidad.html">Publicidad</a>
+        <a href="contacto.html"   data-nav="contacto.html">Contacto</a>
+        <span class="session-area" id="session-area"></span>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero__inner">
+        <div class="anim-fade-up">
+          <span class="badge anim-pulse mb-4">🎓 Universidad Continental · Huancayo</span>
+          <h1 class="hero__title">Construye tu carrera <em>donde se forma el talento del Perú.</em></h1>
+          <p class="hero__lead">Conti Talent es la plataforma de la Universidad Continental Huancayo para reclutar docentes, practicantes e investigadores. Postula a nuestras vacantes, rinde tu evaluación y avanza por un proceso transparente.</p>
+          <div class="hero__ctas">
+            <a class="btn btn--primary btn--lg" href="ofertas.html">Ver ofertas</a>
+            <a class="btn btn--ghost btn--lg"   href="registro.html">Crear cuenta</a>
+          </div>
+        </div>
+        <aside class="hero__visual anim-scale" aria-hidden="true">
+          <img class="hero-visual__image" src="img/compu.gif" alt="" />
+        </aside>
+      </div>
+    </section>
+
+    <section class="container section--top-tight">
+      <div class="kpi-grid" id="home-stats"></div>
+    </section>
+
+    <section class="section container">
+      <header class="section-heading">
+        <span class="section-eyebrow">Áreas</span>
+        <h2>Encuentra tu lugar</h2>
+        <p class="muted">Explora oportunidades dentro de nuestras áreas y centros de investigación.</p>
+      </header>
+      <div class="areas-grid" id="home-areas"></div>
+    </section>
+
+    <section class="section container">
+      <header class="section-heading">
+        <span class="section-eyebrow">Ofertas destacadas</span>
+        <h2>Las más solicitadas esta semana</h2>
+      </header>
+      <div class="featured-grid" id="home-featured"></div>
+    </section>
+
+    <section class="section container">
+      <header class="section-heading">
+        <span class="section-eyebrow">Cómo funciona</span>
+        <h2>De postulante a colaborador en 5 pasos</h2>
+      </header>
+      <div class="feature-grid">
+        <article class="feature anim-fade-up delay-1">
+          <div class="feature__icon">📂</div>
+          <h3>Explora áreas</h3>
+          <p class="muted">Recorre las áreas y áreas que se ajustan a tu perfil.</p>
+        </article>
+        <article class="feature anim-fade-up delay-2">
+          <div class="feature__icon">📝</div>
+          <h3>Registra tu perfil</h3>
+          <p class="muted">Crea tu cuenta y sube tu CV con un par de clics.</p>
+        </article>
+        <article class="feature anim-fade-up delay-3">
+          <div class="feature__icon">🎯</div>
+          <h3>Postula</h3>
+          <p class="muted">Aplica a prácticas o vacantes docentes desde un solo lugar.</p>
+        </article>
+        <article class="feature anim-fade-up delay-4">
+          <div class="feature__icon">🧠</div>
+          <h3>Rinde la evaluación</h3>
+          <p class="muted">Demuestra tus conocimientos con un cuestionario calificado de forma automática.</p>
+        </article>
+        <article class="feature anim-fade-up delay-5">
+          <div class="feature__icon">🚀</div>
+          <h3>Avanza en el proceso</h3>
+          <p class="muted">Sigue tu estado en tiempo real: entrevistas, evaluaciones y decisión final.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <div>
+        <div class="brand">
+          <img class="brand__logo" src="img/contitalent.png" alt="Conti Talent" />
+        </div>
+        <p class="muted footer-brand-desc">Plataforma oficial de la Universidad Continental Huancayo para descubrir y desarrollar talento en sus áreas.</p>
+      </div>
+      <div>
+        <h5>Producto</h5>
+        <a href="areas.html">Áreas</a>
+        <a href="ofertas.html">Ofertas</a>
+        <a href="publicidad.html">Publicidad</a>
+      </div>
+      <div>
+        <h5>Universidad</h5>
+        <a href="contacto.html">Contacto</a>
+        <a href="publicidad.html">Sobre nosotros</a>
+      </div>
+      <div>
+        <h5>Cuenta</h5>
+        <a href="login.html">Iniciar sesión</a>
+        <a href="registro.html">Registrarse</a>
+      </div>
+    </div>
+    <div class="container site-footer__bottom">
+      <span>© 2026 Universidad Continental · Conti Talent</span>
+      <span>Huancayo · Junín · Perú</span>
+    </div>
+  </footer>
+
+  <script src="js/storage-api.js?v=rest3"></script>
+  <script src="js/ui.js?v=rest3"></script>
+  <script src="js/validators.js?v=rest3"></script>
+  <script src="js/auth.js?v=rest3"></script>
+  <script src="js/areas.js?v=rest3"></script>
+  <script src="js/ofertas.js?v=rest3"></script>
+  <script src="js/postulantes.js?v=rest3"></script>
+  <script src="js/main.js?v=rest3"></script>
+  <script src="js/page-home.js?v=rest3"></script>
+</body>
+</html>

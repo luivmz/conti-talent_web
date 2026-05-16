@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evaluación técnica · Conti Talent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css?v=logo-big" />
+  <link rel="stylesheet" href="css/layout.css?v=logo-full" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html">
+        <img class="brand__logo" src="img/contitalent.png" alt="Conti Talent" />
+      </a>
+      <nav class="primary-nav">
+        <a href="mis-postulaciones.html">Mis postulaciones</a>
+        <span class="session-area" id="session-area"></span>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page-shell">
+    <section class="quiz">
+      <header class="anim-fade-up mb-4">
+        <span class="badge" id="quiz-area">—</span>
+        <h1 id="quiz-title" class="mt-2">—</h1>
+        <p class="muted">Responde todas las preguntas. Tu puntaje se calculará después automáticamente.</p>
+      </header>
+
+      <div class="quiz__progress">
+        <span id="quiz-progress-text">0 / 0 respondidas</span>
+        <span class="soft">Calificación automática</span>
+      </div>
+      <div class="progress quiz-progress-wrap">
+        <div class="progress__bar" id="quiz-progress-bar"></div>
+      </div>
+
+      <form id="quiz-form" novalidate>
+        <div id="quiz-questions"></div>
+        <div class="form-actions mt-5">
+          <a href="mis-postulaciones.html" class="btn btn--ghost">Guardar y salir</a>
+          <button type="submit" class="btn btn--primary btn--lg">Enviar respuestas</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__bottom">
+      <span>© 2026 Universidad Continental · Conti Talent</span>
+    </div>
+  </footer>
+
+  <script src="js/storage-api.js?v=rest3"></script>
+  <script src="js/ui.js?v=rest3"></script>
+  <script src="js/validators.js?v=rest3"></script>
+  <script src="js/auth.js?v=rest3"></script>
+  <script src="js/areas.js?v=rest3"></script>
+  <script src="js/ofertas.js?v=rest3"></script>
+  <script src="js/postulantes.js?v=rest3"></script>
+  <script src="js/evaluacion.js?v=rest3"></script>
+  <script src="js/main.js?v=rest3"></script>
+  <script src="js/page-evaluacion.js?v=rest3"></script>
+</body>
+</html>

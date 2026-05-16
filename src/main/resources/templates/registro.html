@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crear cuenta · Conti Talent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css?v=logo-big" />
+  <link rel="stylesheet" href="css/layout.css?v=logo-full" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html">
+        <img class="brand__logo" src="img/contitalent.png" alt="Conti Talent" />
+      </a>
+      <nav class="primary-nav">
+        <a href="login.html" class="btn btn--ghost btn--sm">Iniciar sesión</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="auth-shell">
+    <aside class="auth-shell__art">
+      <div class="auth-art-bubbles" aria-hidden="true">
+        <span class="auth-bubble--reg-1"></span>
+        <span class="auth-bubble--reg-2"></span>
+        <span class="auth-bubble--reg-3"></span>
+      </div>
+      <div class="auth-art-content anim-fade-up">
+        <span class="badge anim-pulse">Únete</span>
+        <h2 class="mt-4">Forma parte de la <em>Universidad Continental</em></h2>
+        <p>Crea una cuenta para postular a prácticas, vacantes docentes y otras oportunidades.</p>
+      </div>
+    </aside>
+
+    <section class="auth-shell__form">
+      <div class="auth-shell__form-inner anim-fade-up">
+        <h1>Crear cuenta</h1>
+        <p class="muted">Empieza tu camino con Conti Talent.</p>
+
+        <form id="registro-form" class="form-grid mt-5" novalidate>
+          <div class="form-grid form-grid--2">
+            <div class="field">
+              <label for="nombre">Nombre</label>
+              <input class="input" id="nombre" name="nombre" placeholder="Lucía" autocomplete="given-name" />
+              <span class="error"></span>
+            </div>
+            <div class="field">
+              <label for="apellido">Apellido</label>
+              <input class="input" id="apellido" name="apellido" placeholder="Ramos" autocomplete="family-name" />
+              <span class="error"></span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="email">Correo electrónico</label>
+            <input class="input" type="email" id="email" name="email" placeholder="tucorreo@email.com" autocomplete="email" />
+            <span class="error"></span>
+          </div>
+          <div class="form-grid form-grid--2">
+            <div class="field">
+              <label for="password">Contraseña</label>
+              <input class="input" type="password" id="password" name="password" placeholder="Mínimo 6 caracteres" autocomplete="new-password" />
+              <span class="error"></span>
+            </div>
+            <div class="field">
+              <label for="passwordConfirm">Confirmar contraseña</label>
+              <input class="input" type="password" id="passwordConfirm" name="passwordConfirm" placeholder="Repite la contraseña" autocomplete="new-password" />
+              <span class="error"></span>
+            </div>
+          </div>
+          <label class="checkbox">
+            <input type="checkbox" name="terms" id="terms" />
+            <span class="muted">Acepto los términos del servicio y la política de privacidad.</span>
+          </label>
+          <button class="btn btn--primary btn--block btn--lg" type="submit">Crear cuenta</button>
+        </form>
+
+        <p class="soft text-center mt-5">¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/storage-api.js?v=rest3"></script>
+  <script src="js/ui.js?v=rest3"></script>
+  <script src="js/validators.js?v=rest3"></script>
+  <script src="js/auth.js?v=rest3"></script>
+  <script src="js/main.js?v=rest3"></script>
+  <script src="js/page-registro.js?v=rest3"></script>
+</body>
+</html>

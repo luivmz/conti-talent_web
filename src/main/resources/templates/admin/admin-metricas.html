@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Métricas y Ranking · Conti Talent Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/base.css?v=logo-big" />
+  <link rel="stylesheet" href="../css/layout.css?v=logo-full" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="../index.html">
+        <img class="brand__logo" src="../img/contitalent.png" alt="Conti Talent" /><span class="brand__admin">Admin</span>
+      </a>
+      <nav class="primary-nav">
+        <a href="../index.html">Ir al sitio</a>
+        <span class="session-area" id="session-area"></span>
+      </nav>
+    </div>
+  </header>
+
+  <div class="app-shell">
+    <aside class="app-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section__label">General</div>
+        <a class="sidebar-link" href="dashboard.html"><span>📊</span> Dashboard</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section__label">Reclutamiento</div>
+        <a class="sidebar-link" href="admin-areas.html"><span>🗂️</span> Áreas</a>
+        <a class="sidebar-link" href="admin-ofertas.html"><span>💼</span> Ofertas</a>
+        <a class="sidebar-link" href="admin-preguntas.html"><span>❓</span> Preguntas</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section__label">Evaluación</div>
+        <a class="sidebar-link" href="admin-postulantes.html"><span>👥</span> Postulantes</a>
+        <a class="sidebar-link is-active" href="admin-metricas.html"><span>📈</span> Métricas / Ranking</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section__label">Sistema</div>
+        <a class="sidebar-link" href="admin-usuarios.html"><span>🔐</span> Usuarios</a>
+      </div>
+    </aside>
+
+    <main class="app-main">
+      <header class="page-header anim-fade-up">
+        <div>
+          <h1 class="page-header__title">Métricas y Ranking</h1>
+          <p class="page-header__sub">5 métricas en serie de tiempo + 5 indicadores puntuales del proceso.</p>
+        </div>
+      </header>
+
+      <section>
+        <h2 class="mb-4">Series de tiempo (últimos 8 meses)</h2>
+        <div class="metrics-grid" id="charts-grid"></div>
+      </section>
+
+      <section class="section--top-loose">
+        <h2 class="mb-4">Indicadores puntuales</h2>
+        <div class="kpi-grid" id="punctual-kpis"></div>
+      </section>
+
+      <section class="section--top-loose">
+          <header class="page-header">
+            <h2>Ranking de postulantes</h2>
+            <div class="filters-bar" style="margin:0">
+              <select class="select" id="ranking-oferta-filter">
+                <option value="">Todas las ofertas</option>
+              </select>
+              <select class="select" id="ranking-estado-filter">
+                <option value="">Todos los estados</option>
+              </select>
+              <select class="select" id="ranking-area-filter">
+                <option value="">Todas las areas</option>
+              </select>
+            </div>
+          </header>
+        <div class="ranking-list" id="ranking-list"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../js/storage-api.js?v=rest7"></script>
+  <script src="../js/ui.js?v=rest7"></script>
+  <script src="../js/validators.js?v=rest7"></script>
+  <script src="../js/auth.js?v=rest7"></script>
+  <script src="../js/areas.js?v=rest7"></script>
+  <script src="../js/ofertas.js?v=rest7"></script>
+  <script src="../js/postulantes.js?v=rest7"></script>
+  <script src="../js/chart.js?v=rest7"></script>
+  <script src="../js/main.js?v=rest7"></script>
+  <script src="../js/page-admin-metricas.js?v=rest7"></script>
+</body>
+</html>
